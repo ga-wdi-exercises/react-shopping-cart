@@ -131,7 +131,7 @@ class ShoppingCart extends React.Component {
           <hr/>
           <h3>total <span className='right'>${this.state.total}</span></h3>
           <hr/>
-          <small>cart number: 24abd812-0777-42b6-b9f5-87f1c00cd860</small>
+          <small>cart number: 1016396673255</small>
         </div>
       </div>
     )
