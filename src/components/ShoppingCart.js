@@ -1,23 +1,3 @@
-# React Shopping Cart
-
-Recreate a shopping cart page in React. Your final product should function similarly to [this deployed version](http://shopping-cart-react.surge.sh/) of the component.
-
-## Getting Started
-
-- Fork and clone this repo
-- Once you have the app locally, install necessary dependencies with `$ npm install`
-- Start the development server locally with `$ npm start`, then visit `localhost:3000` in the browser to view app
-
-## Instructions
-
-Take the existing markup rendered from the `ShoppingCart` component in `src/components/ShoppingCart.js` and change into a fully functioning component. This means that you only have to add functionality -- not markup or styling -- to the existing code!
-
-
-## Getting Started
-
-It looks like there's a lot of complicated code here in `src/components/ShoppingCart.js` but really it's all just display. Take a minute to look at the `ShoppingCart` component.
-
-```jsx
 import React, {Component} from 'react';
 
 class ShoppingCart extends Component {
@@ -94,43 +74,3 @@ class ShoppingCart extends Component {
 }
 
 export default ShoppingCart
-```
-
-### Representing Data
-
-So we have some items with set prices. It would make sense for these to be represented as objects in an array, like so:
-
-```js
-const itemsInCart =[
-  { 
-    name: "Gaiam Kids Yoga Headband - Pink/Blue",
-    cost: 9.38,
-    imgUrl: "https://scene7-secure.targetimg1.com/is/image/Target/39598742?wid=90&hei=90",
-    quantityInCart: 1
-  }, { 
-    name: "Hamburger Helper",
-    cost: 11.52,
-    imgUrl: "https://scene7-secure.targetimg1.com/is/image/Target/12953828?wid=90&hei=90",
-    quantityInCart: 1
-  }
-```
-
-### Adding State
-
-Next, add a `constructor()` method to `ShoppingCart`. Initialize state here...
-
-```jsx
-constructor(props) {
-  super(props)
-  // initialize state
-  this.state = {
-    items: itemsInCart,
-    total: 0,
-    tax: .05 //checkout method .toFixed()
-  }
-}
-```
-
-### Next Steps
-
-You'll next need to add methods, event handler methods, and event listeners.
