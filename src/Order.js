@@ -7,7 +7,7 @@ export default class Order extends Component {
       <h3>order summary</h3>
       <div>
         <strong>subtotal</strong>
-        <small> (3 items)</small>
+        <small> {this.props.items}</small>
         <strong className='right'>$8.98</strong>
       </div>
       <div>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Item from './Item.js'
+
 import Order from './Order'
 
 const itemsInCart = [
@@ -25,14 +25,23 @@ export default class Cart extends Component {
       //checkout method .toFixed()
       total: 0,
       tax: .05,
-      subtotal: 0,
-      estimatedtax: .40
+      subtotal: 0
     }
   }
-updateAmount(){
+updateAmount(quantity, index){
   let prevItems = this.state.items.slice()
+  let item = prevItems[index]
+  item.quantity = item.quantity + quantity < 0 ? 0 : item.quantity + quantity
+  this.state({
+    items: prevItems
+  })
+  }
 
-}
+calculateTotal(){
+
+
+  }
+
   render () {
     let items = this.state.items.map((item, i)=>{
       console.log(item);
@@ -42,12 +51,31 @@ updateAmount(){
       <div className='cart'>
         <div className='items'>
           {items}
-          <h2>cart total: <span>$9.38</span></h2>
+          <h2>cart total: <span>{this.state.total}</span></h2>
           <div className='half right'>
             <a href='#' className='checkout'>I am ready to checkout</a>
           </div>
           </div>
-          <Order />
+        </div>
+        <Order />
+        <div className='item'>
+          <div className='half'>
+            {this.props.name}
+          </div>
+          <div className='half'>
+            <span className='circle' onClick={e => onUpdateAmount(-1, index)} >-</span>
+            <span className='pad-left pad-right'>1</span>
+            <span className='circle' onClick="updateAmount">+</span>
+            <strong className='right'>{this.props.cost}</strong>
+            <div>
+              <a href='#'>remove</a> <br/>
+              <label>
+                <input type='checkbox'/>
+              </label>
+              wrap it for $5.99
+              <hr />
+            </div>
+          </div>
         </div>
     )
   }
