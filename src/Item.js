@@ -10,7 +10,7 @@ export default class Item extends Component {
     {this.props.name}
   </div>
   <div className='half'>
-    <span className='circle'onClick={this.handleItems}>-</span>
+    <span className='circle'onClick={this.handleItems(e)}>-</span>
     <span className='pad-left pad-right'>1</span>
     <span className='circle'>+</span>
     <strong className='right'>${this.props.cost}</strong>

@@ -31,7 +31,7 @@ export default class ShoppingCart extends Component {
   }
 handleItems (e) {
   this.setState({
-    items: e.target.value
+    items: this.state.count + 1
   })
 }
 
