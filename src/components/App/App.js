@@ -3,7 +3,7 @@ import Items from '../Items/Items.js';
 import Summary from '../Summary/Summary.js';
 
 
-export default class ShoppingCart extends React.Component {
+export default class App extends React.Component {
 
   constructor(props){
     super(props)
@@ -20,7 +20,10 @@ render () {
 
 
 
-      <Summary total={this.state.totalPayment}/>
+      <Summary subTotal={this.props.total}
+              noOfItems={this.props.count}
+
+    />
 
   </div>
   )}

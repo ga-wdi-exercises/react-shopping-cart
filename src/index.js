@@ -1,11 +1,11 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import App from './components/App/App.js';
 import './index.css';
 
 ReactDOM.render(
-  <ShoppingCart />,
+  <App />,
   document.getElementById('root')
 );
 

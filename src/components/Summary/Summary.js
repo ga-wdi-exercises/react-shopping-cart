@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import Items from '../Items/Items.js';
 
 export default class Summary extends Component {
   constructor(props) {
     super(props)
-
+    // let amountPayable = this.state.total + (this.state.total * .40)
+    // console.log(this.props);
     this.state = {
       subTotal: this.props.total,
       noOfItems: this.props.count,
@@ -14,6 +16,18 @@ export default class Summary extends Component {
 
     }
   }
+
+
+    // summaryTotal(e) {
+    //
+    //   this.setState ({
+    //     totalPayment: this.state.amountPayable,
+    //     subTotal: this.state.props.total,
+    //     noOfItems: this.state.props.count
+    //   })
+    //   }
+
+
 
 
 

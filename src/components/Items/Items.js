@@ -53,12 +53,7 @@ export default class Items extends Component {
     })
   }
 
-  summaryTotal(e) {
-    let amountPayable = this.state.total + (this.state.total * .40)
-    this.setState ({
-      totalPayment: amountPayable
-    })
-  }
+
 
 
 
